@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#830050">
+<meta name="description" content="A11ySkills: observatorio de competencias en accesibilidad digital.">
+<title>A11ySkills · Observatorio de competencias</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a><div class="topline"></div>
+<header class="site-header"><div class="container header-row">
+<a href="index.html" class="brand" aria-label="Ir al cuestionario de A11ySkills"><span class="brand-identity"><img class="brand-logo" src="assets/a11yskills-logo.png" width="260" height="63" alt="A11ySkills"><span class="brand-copy"><small>Plataforma de investigación sobre competencias en accesibilidad digital</small></span></span></a>
+<nav class="nav" aria-label="Navegación principal"><a href="index.html#participa">Participación</a><a href="observatorio.html" aria-current="page">Observatorio</a><a href="sobre-el-proyecto.html">Sobre el proyecto</a></nav><div class="account-toolbar" id="account-toolbar"><button type="button" class="button outline small" data-auth-login>Acceder con Google</button></div>
+</div></header><aside class="expert-preview-banner" role="note"><strong>Prototipo para revisión experta.</strong> Acceso Google simulado, sin conexión a Firebase ni recogida de resultados. Registra tus valoraciones en el documento de validación facilitado por el equipo investigador.</aside>
+<main tabindex="-1" id="contenido">
+<section class="hero report-hero page-hero" aria-labelledby="report-title"><div class="container report-hero-grid"><div>
+
+<p class="section-label">Observatorio</p>
+<h1 id="report-title">Consulta las competencias en <span>accesibilidad digital</span></h1>
+<p class="report-lead">Explora los perfiles, las vías de aprendizaje y la comprensión de WCAG mediante estadísticas agrupadas. El Exprés es abierto y sin registro. El Reto completo requiere cuenta Google y un Exprés previamente vinculado; el Observatorio publica únicamente datos agregados.</p>
+<div class="button-row"><a class="button" href="#hallazgos">Accede al observatorio</a><a class="button outline" href="index.html">Realizar el cuestionario</a></div>
+</div>
+</div></section>
+<section class="section" id="resultados-publicos"><div class="container"><div class="section-head"><p class="section-label">Observatorio · Datos publicados</p><h2>Estadísticas agregadas del estudio</h2><p class="muted">Estos resultados solo se publican después de su revisión y con las agrupaciones mínimas definidas para proteger la privacidad.</p></div><div id="public-aggregates" class="notice" role="status" aria-live="polite">Comprobando si hay resultados validados…</div></div></section>
+<section class="source-panel" aria-labelledby="fuente-datos-titulo"><div class="container source-panel-inner">
+  <div class="source-panel-copy">
+    <h2 id="fuente-datos-titulo">¿Qué datos quieres consultar?</h2>
+    <p id="source-status" role="status" aria-live="polite"><strong>Vista de ejemplo: datos ficticios.</strong> Se muestran 236 participaciones simuladas exclusivamente para visualizar los gráficos. No son resultados de investigación ni datos de personas reales.</p>
+  </div>
+  <fieldset class="source-options"><legend>Fuente de las estadísticas</legend>
+    <label><input type="radio" name="dataset" value="ejemplo" checked><span>Ejemplo ficticio</span></label>
+    <label><input type="radio" name="dataset" value="local"><span>Mis respuestas de este navegador</span></label>
+  </fieldset>
+</div></section>
+<nav class="chapter-nav" aria-label="Secciones del observatorio"><div class="container"><p id="data-view-label" class="data-view-label">Vista de ejemplo · Datos ficticios, no resultados reales</p><div class="chapter-links"><a href="#hallazgos">En resumen</a><a href="#perfiles">Perfiles</a><a href="#experiencia">Experiencia</a><a href="#formacion">Formación</a><a href="#conocimientos">Conocimientos</a><a href="#comprension">Comprensión WCAG</a><a href="#tecnologia">Dispositivos y navegadores</a></div></div></nav>
+<section class="section intro-findings" id="hallazgos"><div class="container">
+<div class="report-overline">00 / Panorama general</div><div class="section-head"><h2>Los datos, de un vistazo</h2><p>Una selección de indicadores para entender la muestra. Cada gráfico identifica su base de respuestas.</p></div>
+<div class="hero-metrics" id="metrics" aria-live="polite"></div>
+<div class="main-findings" id="findings"></div>
+</div></section>
+<section class="report-chapter section" id="perfiles"><div class="container"><div class="chapter-heading"><div class="chapter-numeral" aria-hidden="true">01</div><div><p class="section-label">Personas y ámbitos</p><h2>¿Quién está detrás de las respuestas?</h2><p>Los ámbitos profesionales ayudan a comprender desde qué perspectivas se aborda la accesibilidad digital.</p></div></div><div id="chart-profiles" class="chapter-visual"></div></div></section>
+<section class="report-chapter section alt" id="experiencia"><div class="container"><div class="chapter-heading"><div class="chapter-numeral" aria-hidden="true">02</div><div><p class="section-label">Trayectoria y práctica</p><h2>La accesibilidad en el trabajo cotidiano</h2><p>La experiencia acumulada y la dedicación permiten contextualizar el conocimiento declarado sin confundirlo con competencia demostrada.</p></div></div><div id="chart-experience" class="chapter-visual"></div></div></section>
+<section class="report-chapter section" id="formacion"><div class="container"><div class="chapter-heading"><div class="chapter-numeral" aria-hidden="true">03</div><div><p class="section-label">Aprendizaje y desarrollo</p><h2>¿Dónde y cómo se aprende accesibilidad?</h2><p>Las vías de aprendizaje pueden coexistir: una misma persona puede combinar formación universitaria, práctica profesional y recursos abiertos.</p></div></div><div id="chart-training" class="chapter-visual"></div></div></section>
+<section class="report-chapter section alt" id="conocimientos"><div class="container"><div class="chapter-heading"><div class="chapter-numeral" aria-hidden="true">04</div><div><p class="section-label">Conocimiento autopercibido</p><h2>Lo que las personas creen saber</h2><p>La autovaloración y la confianza ayudan a interpretar las respuestas, pero no sustituyen la medición mediante ejercicios.</p></div></div><div id="chart-knowledge" class="chapter-visual"></div></div></section>
+<section class="report-chapter section" id="comprension"><div class="container"><div class="chapter-heading"><div class="chapter-numeral" aria-hidden="true">05</div><div><p class="section-label">Evaluación breve</p><h2>De conocer las reglas a interpretar situaciones reales</h2><p>Se presentan aciertos agregados por bloque y temática. No se publican decisiones individuales, opciones de respuesta ni soluciones de los casos.</p></div></div><div id="chart-assess" class="chapter-visual"></div></div></section>
+<section class="report-chapter section alt" id="tecnologia"><div class="container"><div class="chapter-heading"><div class="chapter-numeral" aria-hidden="true">06</div><div><p class="section-label">Contexto tecnológico de participación</p><h2>¿Desde qué dispositivos y navegadores se participa?</h2><p>Distribución de participaciones por tipo de dispositivo y navegador. Se registran categorías generales, no el identificador completo del navegador.</p></div></div><div id="chart-device" class="two-charts"></div><p class="fineprint">La detección automática es aproximada. Un mismo participante puede utilizar distintos dispositivos en diferentes participaciones. En esta demo se muestran datos ficticios o datos guardados en este navegador.</p></div></section>
+<section class="section" id="analisis"><div class="container"><div class="report-overline">Análisis</div><h2>Análisis: cómo leer los resultados</h2><p class="method-intro">Las cifras del modo «Ejemplo ficticio» sirven únicamente para comprobar el diseño del observatorio. No se mezclan con respuestas personales ni deben citarse como resultados de investigación.</p><div class="grid-2 method-cards"><article class="card"><h3>Procedencia de los datos</h3><p>Esta versión muestra únicamente participaciones simuladas y guardadas en el navegador actual. No hay una base de datos central conectada ni resultados públicos agregados. Los resultados generales se habilitarán cuando exista una recogida científica autorizada.</p></article><article class="card"><h3>Gráficos accesibles</h3><p>Los gráficos incluyen título, valores numéricos visibles, base muestral y tabla de datos equivalente. Las barras y los anillos son decorativos y el significado no depende únicamente del color.</p></article><article class="card"><h3>Qué significan los porcentajes</h3><p>En preguntas de selección múltiple, una misma persona puede aparecer en varias categorías: los porcentajes no tienen por qué sumar 100 %. Para todos los indicadores se utiliza el número de respuestas disponibles correspondiente a la variable analizada.</p></article><article class="card"><h3>Precauciones científicas</h3><p>La muestra de participación voluntaria sería de conveniencia. Los resultados no deben generalizarse a todos los profesionales. Las preguntas de autopercepción no certifican competencias; la batería breve requiere pilotaje y validación experta. Las celdas pequeñas se agruparán u ocultarán en la versión pública.</p></article></div>
+</div></section>
+<section class="section closing-cta"><div class="container cta-grid"><div><p class="section-label">Siguiente paso</p><h2>¿Quieres aportar tu perspectiva?</h2><p>Completa el recorrido A11ySkills y descubre recursos para seguir aprendiendo.</p></div><div class="button-row"><a href="index.html#participa" class="button">Participar</a></div></div></section>
+</main>
+<footer class="footer"><div class="container footer-project-shortcut"><a href="sobre-el-proyecto.html">Sobre el proyecto A11ySkills</a></div><div class="container footer-row"><div><strong>A11ySkills · Universitat de Lleida</strong><p>Observatorio de competencias en accesibilidad digital · Universitat de Lleida</p></div><div><a href="index.html">Volver al cuestionario</a><br><a href="informacion-estudio.html">Información y privacidad</a><br><a href="#contenido">Volver arriba</a></div></div><div class="container footer-griho">
+ <a href="https://griho.udl.cat/" target="_blank" rel="noopener noreferrer" class="griho-link" aria-label="Visitar la web oficial del grupo de investigación GRIHO de la Universitat de Lleida (se abre en otra pestaña)">
+  <span class="griho-logo-wrap"><img src="https://griho.udl.cat/export/sites/Griho/en/.galleries/AboutUs_Gallery/logoGriho.png_443620257.png" width="112" height="85" loading="lazy" decoding="async" alt="Logotipo de GRIHO"></span>
+  <span><strong>GRIHO</strong><small>Grup de Recerca en Interacció Persona Ordinador i Integració de Dades · Universitat de Lleida</small></span>
+ </a></div>
+</footer>
+<script src="footer-logo.js"></script>
+<script src="cases-v20.js"></script><script src="schema.js"></script><script src="datos-ejemplo.js"></script><script src="observatorio.js"></script><script src="public-stats.js"></script>
+<script type="module" src="firebase-client.js"></script><script src="account-header.js"></script><script src="mobile-nav.js"></script><nav class="mobile-bottom-nav" aria-label="Navegación móvil principal">
+ <a href="index.html#participa" data-mobile-item="participacion"><span class="mobile-nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="4.5" width="14" height="16" rx="2"/><path d="M9 4.5v-1h6v1M9 11h6M9 15h4"/></svg></span><span>Participación</span></a>
+ <a href="observatorio.html" data-mobile-item="observatorio"><span class="mobile-nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 20h18M5 17v-6h4v6M10 17V5h4v12M15 17V9h4v8"/><path d="M5 11h4M10 5h4M15 9h4"/></svg></span><span>Observatorio</span></a>
+ <a href="sobre-el-proyecto.html" data-mobile-item="proyecto"><span class="mobile-nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 6.5C9.5 5 6.5 5 3 6v13c3.5-1 6.5-1 9 .5 2.5-1.5 5.5-1.5 9-.5V6c-3.5-1-6.5-1-9 .5Z"/><path d="M12 6.5v13"/></svg></span><span>Proyecto</span></a>
+ <button type="button" data-mobile-account><span class="mobile-nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="3.25"/><path d="M5 20v-2c0-3.2 3-5 7-5s7 1.8 7 5v2"/></svg></span><span>Acceder</span></button>
+ </nav><div class="demo-ribbon" role="status">DEMO · Google simulado · Sin envíos a servidores</div></body></html>

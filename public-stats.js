@@ -1,0 +1,12 @@
+/* Resultados agregados publicados mediante proceso administrativo; nunca lee respuestas privadas. */
+(()=>{
+ const target=document.getElementById('public-aggregates');if(!target)return;
+ const esc=x=>String(x??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+ async function draw(){const api=window.A11Y_AUTH;if(!api?.enabled){target.textContent='El Observatorio todavía no está conectado a Firebase. Puedes consultar la vista de ejemplo, identificada como datos ficticios.';return;}
+ try{const result=await api.getPublicStats();if(!result||!result.available){target.textContent='Todavía no hay estadísticas agregadas validadas para su publicación.';return;}
+ const counts=result.byMode||{};const safeCount=v=>v===null||v===undefined?'No publicable':esc(v);
+     const section=(title,group)=>!group?.n?'':`<div class="story-card"><h3>${title}</h3><p>n = ${esc(group.n)} participaciones</p>${group.rows.map(d=>`<p><strong>${esc(d.label)}</strong>: ${esc(d.count)} (${(d.count/group.n*100).toFixed(1).replace('.',',')} %)</p>`).join('')}</div>`;
+ target.innerHTML=`${api.isMock?'<p class="notice"><strong>DEMOSTRACIÓN LOCAL.</strong> Estas estadísticas solo se ven en este navegador; no están publicadas en Firebase. No son resultados reales del estudio.</p>':''}<div class="grid-3"><div class="kpi"><strong>${esc(result.nTotal)}</strong><span>Participaciones publicables</span></div><div class="kpi"><strong>${safeCount(counts.expres)}</strong><span>Reto Exprés</span></div><div class="kpi"><strong>${safeCount(counts.completo)}</strong><span>Reto completo</span></div></div><p class="field-help">Estadísticas agregadas, no datos individuales. Última actualización: ${esc(result.updatedLabel||'Fecha no indicada')}. Se excluyen las agrupaciones pequeñas para proteger la privacidad.</p>${result.indicators?.length?`<div class="story-card"><h3>Indicadores agregados de perfil y formación</h3><div class="narrative-bars">${result.indicators.map(d=>`<div class="vbar"><div class="bar-top"><span>${esc(d.label)}</span><strong>${esc(d.percent)} % (${esc(d.count)} de ${esc(d.n)})</strong></div><div class="bar-rail" aria-hidden="true"><div class="bar-fill" style="width:${Math.min(100,Math.max(0,d.percent))}%"></div></div></div>`).join('')}</div></div>`:''}${section('Dispositivos utilizados',result.device)}${section('Navegadores utilizados',result.browser)}`;
+ }catch(error){target.textContent='No se pudo consultar el Observatorio público: '+error.message;}}
+ window.addEventListener('a11y-auth-ready',draw);draw();
+})();
